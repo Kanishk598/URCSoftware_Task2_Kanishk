@@ -3,12 +3,12 @@ import rospy
 from std_msgs.msg import Int32
 
 
-inc = 0
+inc = Int32()
 rospy.init_node("increasing")
 rate = rospy.Rate(1)
-publisher = rospy.Publisher("/inc", Int32)
-
+publisher = rospy.Publisher("/inc", Int32, queue_size=5)
 while not rospy.is_shutdown():
+    print("Inc: ", inc)
     publisher.publish(inc)
-    inc += 1
+    inc.data += 1
     rate.sleep()

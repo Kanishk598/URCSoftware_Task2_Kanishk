@@ -1,5 +1,5 @@
 <launch>
-<node pkg="Task2" type="increasing.py" name="increasing" />
-<node pkg="Task2" type="decreasing.py" name="decreasing" />
-<node pkg="Task2" type="constant.py" name="constant" />
+<node pkg="Task2" type="increasing.py" name="increasing" output="screen" />
+<node pkg="Task2" type="decreasing.py" name="decreasing" output="screen" />
+<node pkg="Task2" type="constant.py" name="constant" output="screen" />
 </launch>
