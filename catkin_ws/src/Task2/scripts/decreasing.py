@@ -9,7 +9,6 @@ rate = rospy.Rate(1)
 publisher = rospy.Publisher("/dec", Int32, queue_size=5)
 
 while not rospy.is_shutdown():
-    print("Dec: ", dec)
     publisher.publish(dec)
     dec.data -= 1
     rate.sleep()
