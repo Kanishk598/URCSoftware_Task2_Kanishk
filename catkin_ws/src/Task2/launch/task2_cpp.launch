@@ -1,0 +1,5 @@
+<launch>
+<node pkg="Task2" type="increase" name="increase" />
+<node pkg="Task2" type="decrease" name="decrease" />
+<node pkg="Task2" type="constant" name="constant" />
+</launch>
